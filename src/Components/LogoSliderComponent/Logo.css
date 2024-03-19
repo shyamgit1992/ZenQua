@@ -1,0 +1,13 @@
+.single-logo {
+    text-align: center;
+    
+}
+.single-logo img {
+    padding: 0px 30px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .single-logo img {
+        width: 75%;
+    }
+}
