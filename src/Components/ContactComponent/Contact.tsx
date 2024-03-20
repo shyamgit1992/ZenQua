@@ -1,5 +1,7 @@
 import './Contact.css';
-function Contact(){
+import React from 'react';
+class Contact extends React.Component{
+  render(){
     return(
         <>
   {/* Start Breadcrumbs */}
@@ -52,7 +54,7 @@ function Contact(){
                       name="name"
                       type="text"
                       placeholder="Andrio Gilius"
-                      required="required"
+                      //required="required"
                     />
                   </div>
                 </div>
@@ -63,7 +65,7 @@ function Contact(){
                       name="email"
                       type="email"
                       placeholder="exampla@gmail.com*"
-                      required="required"
+                      //required="required"
                     />
                   </div>
                 </div>
@@ -74,7 +76,7 @@ function Contact(){
                       name="subject"
                       type="text"
                       placeholder="Type your subject"
-                      required="required"
+                      //required="required"
                     />
                   </div>
                 </div>
@@ -108,6 +110,6 @@ function Contact(){
 </>
 
     );
-
+    }
 }
 export default Contact;

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-function Auth(){
-    const Navigate = useNavigate();
-    useEffect(()=>{
+import React from "react";
+class Auth extends React.Component{
+    Navigate = useNavigate();
+    componentDidUpdate(){
         const path = window.location.pathname;
         if(path == "/admin"){
             if(!localStorage.getItem("token") || localStorage.getItem("role")!="admin"){
@@ -31,12 +31,9 @@ function Auth(){
 
         }
 
-    },[]);
-    
-    return(
-    <>
-    </>
-    );
+    }
+   
+  
 
 }
 export default Auth;

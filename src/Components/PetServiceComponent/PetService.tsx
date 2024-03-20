@@ -1,19 +1,21 @@
-import './PetDevice.css';
-function PetDevice(){
+import './PetService.css';
+import React from 'react';
+class PetService extends React.Component{
+  render(){
     return(
         <>
   {/* Start Breadcrumbs */}
-  <div id="/pet-device" className="breadcrumbs">
+  <div id="/pet-service" className="breadcrumbs">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-6 offset-lg-3 col-md-12 col-12">
           <div className="breadcrumbs-content">
-            <h1 className="page-title">Pet Device</h1>
+            <h1 className="page-title">Pet Service</h1>
             <ul className="breadcrumb-nav">
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <li>Pet Device</li>
+              <li>Pet Service</li>
             </ul>
           </div>
         </div>
@@ -355,6 +357,7 @@ function PetDevice(){
 
 
     );
+  }
 
 }
-export default PetDevice;
+export default PetService;

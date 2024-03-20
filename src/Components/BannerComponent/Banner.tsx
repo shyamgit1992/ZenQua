@@ -1,17 +1,7 @@
 import React from "react";
-class Banner extends React.Component{
-    path:string;
-    //prevState:boolean;
-    constructor(props:any){
-      super(props);
-      this.path = window.location.pathname;
-      //this.prevState = true;
 
-    }
-    componentDidUpdate(prevProps:any, prevState:any): void {
-      console.log(prevProps);
-      console.log(prevState);
-    }
+class Banner extends React.Component{
+ 
     render(){
         return(
         <>

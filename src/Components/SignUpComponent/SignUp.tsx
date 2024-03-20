@@ -1,5 +1,6 @@
 import React from "react";
 import validator from 'validator';
+import { NavLink } from "react-router-dom";
 interface SignUpState {
     errors: {
       [key: string]: string;
@@ -29,6 +30,16 @@ interface SignUpState {
         },
       };
     }
+
+    handleNavClick = (path: string) => {
+      //console.log('Pathname:', path);
+      setTimeout(() => {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 10); // Adjust the timeout duration as needed
+    };
   
     componentDidUpdate(prevProps: {}, prevState: SignUpState) {
       if (prevState.formData !== this.state.formData) {
@@ -254,7 +265,7 @@ interface SignUpState {
                       </button>
                     </div>
                     <h4 className="create-account">
-                      Already have an account? <a href="signin.html">Sign In Now</a>
+                      Already have an account? <NavLink onClick={() => this.handleNavClick('/login')} to="/login"><a>Sign In Now</a></NavLink>
                     </h4>
                   </div>
                 </form>

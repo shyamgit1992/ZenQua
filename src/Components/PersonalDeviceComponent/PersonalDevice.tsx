@@ -1,19 +1,21 @@
-import './PersonalService.css';
-function PersonalService(){
+import './PersonalDevice.css';
+import React from 'react';
+class PersonalDevice extends React.Component{
+  render(){
     return(
         <>
   {/* Start Breadcrumbs */}
-  <div id="/personal-service" className="breadcrumbs">
+  <div id="/personal-device" className="breadcrumbs">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-6 offset-lg-3 col-md-12 col-12">
           <div className="breadcrumbs-content">
-            <h1 className="page-title">Personal Service</h1>
+            <h1 className="page-title">Personal Device</h1>
             <ul className="breadcrumb-nav">
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <li>Personal Service</li>
+              <li>Personal Device</li>
             </ul>
           </div>
         </div>
@@ -355,6 +357,7 @@ function PersonalService(){
 
 
     );
+  }
 
 }
-export default PersonalService;
+export default PersonalDevice;

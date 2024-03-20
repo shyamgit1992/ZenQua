@@ -2,36 +2,43 @@ import React from 'react';
 import TinySlider from 'tiny-slider-react';
 import './Slider.css';
 
-const MySlider = () => {
-  const settings = {
-    container: '.testimonial-slider',
-    items: 3,
-    slideBy: 1, // Change to a number if you want to slide by one item
-    autoplay: false,
-    mouseDrag: true,
-    gutter: 20,
-    nav: true,
-    controls: false,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      540: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 2,
-      },
-      1170: {
-        items: 3,
+class MySlider extends React.Component{
+  settings:any;
+  constructor(props:any){
+    super(props);
+    this.settings = {
+      container: '.testimonial-slider',
+      items: 3,
+      slideBy: 1, // Change to a number if you want to slide by one item
+      autoplay: false,
+      mouseDrag: true,
+      gutter: 20,
+      nav: true,
+      controls: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        540: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 2,
+        },
+        1170: {
+          items: 3,
+        }
       }
-    }
-  };
-  
+    };
+    
 
+  }
+  
+  
+render(){
   return (
     <section className="testimonials section">
       <div className="container">
@@ -53,7 +60,7 @@ const MySlider = () => {
           </div>
         </div>
         <div className="row testimonial-slider">
-          <TinySlider settings={settings}>
+          <TinySlider settings={this.settings}>
             {/* Testimonials */}
             <div className="col-lg-4 col-md-6 col-12">
               <div className="single-testimonial">
@@ -149,6 +156,7 @@ const MySlider = () => {
       </div>
     </section>
   );
+}
 };
 
 export default MySlider;

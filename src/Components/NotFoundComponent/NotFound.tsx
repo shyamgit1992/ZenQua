@@ -1,6 +1,8 @@
 import './NotFound.css';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-function NotFound(){
+class NotFound extends React.Component{
+  render(){
     return(
         <>
         {/* Start Error Area */}
@@ -39,6 +41,7 @@ function NotFound(){
       </>
       
     );
+  }
 
 }
 export default NotFound;

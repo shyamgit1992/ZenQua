@@ -1,19 +1,21 @@
-import './VehicleDevice.css';
-function VehicleDevice(){
+import './VehicleService.css';
+import React from 'react';
+class VehicleService extends React.Component{
+  render(){
     return(
         <>
   {/* Start Breadcrumbs */}
-  <div id="/vehicle-device" className="breadcrumbs">
+  <div id="/vehicle-service" className="breadcrumbs">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-6 offset-lg-3 col-md-12 col-12">
           <div className="breadcrumbs-content">
-            <h1 className="page-title">Vehicle Device</h1>
+            <h1 className="page-title">Vehicle Service</h1>
             <ul className="breadcrumb-nav">
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <li>Vehicle Device</li>
+              <li>Vehicle Service</li>
             </ul>
           </div>
         </div>
@@ -355,6 +357,7 @@ function VehicleDevice(){
 
 
     );
+  }
 
 }
-export default VehicleDevice;
+export default VehicleService;

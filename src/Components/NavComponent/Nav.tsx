@@ -45,12 +45,12 @@ class Nav extends React.Component {
               >
                 <ul id="nav" className="navbar-nav ms-auto">
                   <li className="nav-item">
-                    <NavLink to="/" aria-label="Toggle navigation">
+                    <NavLink onClick={() => this.handleNavClick('/')} to="/" aria-label="Toggle navigation">
                       Home
                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/about" aria-label="Toggle navigation">
+                    <NavLink onClick={() => this.handleNavClick('/about')} to="/about" aria-label="Toggle navigation">
                       About
                    </NavLink>
                   </li>
@@ -68,13 +68,13 @@ class Nav extends React.Component {
                     </a>
                     <ul className="sub-menu collapse" id="submenu-1-1">
                       <li className="nav-item">
-                      <NavLink to="/vehicle-device"> <a><i className="lni lni-delivery" />&nbsp;Vehicle Traking Device</a></NavLink>
+                      <NavLink onClick={() => this.handleNavClick('/vehicle-device')} to="/vehicle-device"> <a><i className="lni lni-delivery" />&nbsp;Vehicle Traking Device</a></NavLink>
                       </li>
                       <li className="nav-item">
-                      <NavLink to="/personal-device"> <a><i className="lni lni-user" />&nbsp;Personal Tracking Device</a></NavLink>
+                      <NavLink onClick={() => this.handleNavClick('/personal-device')} to="/personal-device"> <a><i className="lni lni-user" />&nbsp;Personal Tracking Device</a></NavLink>
                       </li>
                       <li className="nav-item">
-                      <NavLink to="/pet-device"> <a><i className="lni lni-heart-filled" />&nbsp;Pet Tracking Device</a></NavLink>
+                      <NavLink onClick={() => this.handleNavClick('/pet-device')} to="/pet-device"> <a><i className="lni lni-heart-filled" />&nbsp;Pet Tracking Device</a></NavLink>
                       </li>
                     </ul>
                   </li> 
@@ -92,13 +92,13 @@ class Nav extends React.Component {
                     </a>
                     <ul className="sub-menu collapse" id="submenu-1-2">
                       <li className="nav-item">
-                      <NavLink to="/vehicle-service" ><a><i className="lni lni-delivery" />&nbsp;Vehicle Traking Service</a></NavLink>
+                      <NavLink onClick={() => this.handleNavClick('/vehicle-service')} to="/vehicle-service" ><a><i className="lni lni-delivery" />&nbsp;Vehicle Traking Service</a></NavLink>
                       </li>
                       <li className="nav-item">
-                      <NavLink to="/personal-service"><a><i className="lni lni-user" />&nbsp;Personal Tracking Service</a></NavLink>
+                      <NavLink onClick={() => this.handleNavClick('/personal-service')} to="/personal-service"><a><i className="lni lni-user" />&nbsp;Personal Tracking Service</a></NavLink>
                       </li>
                       <li className="nav-item">
-                      <NavLink to="/pet-service"><a><i className="lni lni-heart-filled" />&nbsp;Pet Tracking Service</a></NavLink>
+                      <NavLink onClick={() => this.handleNavClick('/pet-service')} to="/pet-service"><a><i className="lni lni-heart-filled" />&nbsp;Pet Tracking Service</a></NavLink>
                       </li>
                     </ul>
                   </li> 
@@ -106,13 +106,13 @@ class Nav extends React.Component {
                     <NavLink to="/documentation" aria-label="Toggle navigation">Documentation</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/downloads" aria-label="Toggle navigation">Downloads</NavLink>
+                    <NavLink onClick={() => this.handleNavClick('/downloads')} to="/downloads" aria-label="Toggle navigation">Downloads</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/pricing" aria-label="Toggle navigation">Pricing</NavLink>
+                    <NavLink onClick={() => this.handleNavClick('/pricing')} to="/pricing" aria-label="Toggle navigation">Pricing</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/contact" aria-label="Toggle navigation">Contact</NavLink>
+                    <NavLink onClick={() => this.handleNavClick('/contact')} to="/contact" aria-label="Toggle navigation">Contact</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink onClick={() => this.handleNavClick('/login')} to="/login" aria-label="Toggle navigation">Login&nbsp;<i className="lni lni-user"></i></NavLink>

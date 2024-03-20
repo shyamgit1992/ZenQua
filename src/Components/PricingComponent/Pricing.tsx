@@ -1,5 +1,7 @@
 import './Pricing.css';
-function Pricing(){
+import React from 'react';
+class Pricing extends React.Component{
+  render(){
     return(
         <>
   {/* Start Breadcrumbs */}
@@ -415,5 +417,6 @@ function Pricing(){
 </>
 
     );
+  }
 }
 export default Pricing;

@@ -25,6 +25,15 @@ class Login extends React.Component<{},LoginState>{
             },
         };
     }
+    handleNavClick = (path: string) => {
+      //console.log('Pathname:', path);
+      setTimeout(() => {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 10); // Adjust the timeout duration as needed
+    };
     componentDidUpdate(prevProps: {}, prevState: LoginState) {
         if (prevState.formData !== this.state.formData) {
           this.validateForm();
@@ -183,7 +192,7 @@ class Login extends React.Component<{},LoginState>{
                   <label className="form-check-label">Remember me</label>
                 </div>
                 <a className="lost-pass">
-                  <NavLink to="/resetpassword">Forgot password?</NavLink>
+                  <NavLink onClick={() => this.handleNavClick('/pass-reset')} to="/pass-reset">Forgot password?</NavLink>
                 </a>
               </div>
               <div className="button">
@@ -192,7 +201,7 @@ class Login extends React.Component<{},LoginState>{
                 </button>
               </div>
               <h4 className="create-account">
-                Don't have an account? <a href="signup.html">Sign Up Now</a>
+                Don't have an account? <NavLink onClick={() => this.handleNavClick('/signup')} to="/signup"><a>Sign Up Now</a></NavLink>
               </h4>
             </div>
           </form>

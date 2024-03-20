@@ -1,6 +1,8 @@
 import './EmailSuccess.css';
 import { NavLink } from 'react-router-dom';
-function EmailSuccess(){
+import React from 'react';
+class EmailSuccess extends React.Component {
+  render(){
     return(
         <>
         {/* Start Error Area */}
@@ -42,6 +44,7 @@ function EmailSuccess(){
            
     
     );
+  }
 
 }
 export default EmailSuccess;

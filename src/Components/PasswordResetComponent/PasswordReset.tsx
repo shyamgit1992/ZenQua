@@ -1,5 +1,17 @@
 import './PasswordReset.css';
-function PasswordReset(){
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+class PasswordReset extends React.Component{
+  handleNavClick = (path: string) => {
+    //console.log('Pathname:', path);
+    setTimeout(() => {
+      const element = document.getElementById(path);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 10); // Adjust the timeout duration as needed
+  };
+  render(){
     return(
         <>
   {/* Start Breadcrumbs */}
@@ -22,7 +34,7 @@ function PasswordReset(){
   </div>
   {/* End Breadcrumbs */}
   {/* Start Reset Password Area */}
-  <div id="/resetpassword" className="account-login section reset-pass">
+  <div id="/pass-reset" className="account-login section reset-pass">
     <div className="container">
       <div className="row">
         <div className="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
@@ -45,7 +57,7 @@ function PasswordReset(){
                     type="email"
                     id="reg-email"
                     placeholder="Enter your email"
-                    required=""
+                    //required=""
                   />
                 </div>
               </div>
@@ -55,7 +67,7 @@ function PasswordReset(){
                 </button>
               </div>
               <h4 className="create-account">
-                Login to your account <a href="signin.html">Click here</a>
+                Login to your account <NavLink onClick={() => this.handleNavClick('/login')} to="/login"><a>Click here</a></NavLink>
               </h4>
             </div>
           </form>
@@ -68,6 +80,7 @@ function PasswordReset(){
 
 
     );
+  }
 
 }
 export default PasswordReset;

@@ -1,19 +1,21 @@
-import './Downloads.css';
-function Downloads(){
+import './Documentation.css';
+import React from 'react';
+class Documentation extends React.Component{
+  render(){
     return(
         <>
           {/* Start Breadcrumbs */}
-  <div id="/downloads" className="breadcrumbs">
+  <div id="/documentation" className="breadcrumbs">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-6 offset-lg-3 col-md-12 col-12">
           <div className="breadcrumbs-content">
-            <h1 className="page-title">Downloads</h1>
+            <h1 className="page-title">Documentation</h1>
             <ul className="breadcrumb-nav">
               <li>
                 <a href="#">Home</a>
               </li>
-              <li>Downloads</li>
+              <li>Documentation</li>
             </ul>
           </div>
         </div>
@@ -28,7 +30,7 @@ function Downloads(){
             <div className="col-lg-6 col-12">
               <div className="content">
                 <h2>
-                  <span>Downloads</span>
+                  <span>Documentation</span>
                   Everything Your Website Needs From Start Up To Success
                 </h2>
                 <p>
@@ -68,5 +70,6 @@ function Downloads(){
         </>
         
     );
+  }
 }
-export default Downloads;
+export default Documentation;
