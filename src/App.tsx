@@ -21,6 +21,7 @@ import Contact from './Components/ContactComponent/Contact';
 import SignUp from './Components/SignUpComponent/SignUp';
 import Login from './Components/LoginComponent/Login';
 import Footer from './Components/FooterComponent/Footer';
+import Check from './Components/CheckComponent/check';
 
 class App extends React.Component{
   render(){
@@ -48,6 +49,7 @@ class App extends React.Component{
           <Route path="/pass-reset" element={<PasswordReset />} />
           <Route path="/email-success" element={<EmailSuccess />} />
           <Route path="/not-found" element={<NotFound />} />
+          <Route path="/check" element={<Check />} />
           {/* Define other routes here */}
         </Routes>
         
