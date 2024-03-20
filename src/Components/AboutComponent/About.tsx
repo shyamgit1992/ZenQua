@@ -1,7 +1,9 @@
+import React from 'react';
 import MyLogoSlider from '../LogoSliderComponent/LogoSlider';
 import MySlider from '../SliderComponent/Slider';
 import './About.css';
-function About(){
+class About extends React.Component{
+  render(){
   return(
     <>
   {/* Start Breadcrumbs */}
@@ -398,5 +400,6 @@ function About(){
 </>
 
   );
+  }
 }
 export default About;
